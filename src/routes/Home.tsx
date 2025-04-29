@@ -9,12 +9,9 @@ const Home = () => {
   const [error, setError] = useState(false);
 
   const loadUser = async (username: string) => {
-
     setError(false);
     setUser(null);
-
     const res = await fetch(`https://api.github.com/users/${username}`);
-
     const data = await res.json();
 
     if (res.status === 404) {
@@ -23,7 +20,6 @@ const Home = () => {
     }
 
   const { avatar_url, login, location, followers, following } = data;
-
   const userData: UserProps = {
       avatar_url,
       login,
@@ -31,9 +27,7 @@ const Home = () => {
       followers,
       following,
     };
-
     setUser(userData);
-
   }
 
   return (
@@ -44,5 +38,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;

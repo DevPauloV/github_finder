@@ -1,5 +1,3 @@
-
-
 const Error = () => {
   return (
     <div>
@@ -7,5 +5,4 @@ const Error = () => {
     </div>
   )
 }
-
 export default Error
